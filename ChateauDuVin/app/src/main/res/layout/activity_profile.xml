@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".Profile">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:foregroundGravity="bottom"
+                android:gravity="bottom"
+                app:layout_constraintBottom_toTopOf="@+id/profile_first_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#000000"
+                    android:backgroundTint="#000000"
+                    android:gravity="center|center_horizontal|top|center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/new_orders_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/new_orders"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goNewOrders"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_add_box_24"
+                        app:tint="#752f37"
+                        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/my_orders_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/my_orders"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goMyOrders"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_notes_24"
+                        app:tint="#752f37"
+                        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/profile_settings_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/profile_settings"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goProfileSettings"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_person_24"
+                        app:tint="#752f37"
+                        tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:backgroundTint="#000000"
+                    android:gravity="center|center_horizontal|top"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/new_orders_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goNewOrders"
+                        android:text="@string/new_orders"
+                        android:textColor="#752F37"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/my_orders_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goMyOrders"
+                        android:text="@string/my_orders"
+                        android:textColor="#752f37"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/profile_settings_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goProfileSettings"
+                        android:text="@string/profile_settings"
+                        android:textColor="#752f37"
+                        tools:ignore="TextContrastCheck" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/profile_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintBottom_toTopOf="@+id/profile_username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_first_name"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/username"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintBottom_toTopOf="@+id/profile_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_last_name"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/profile_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintBottom_toTopOf="@+id/profile_last_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/profile_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/phone_number"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintBottom_toTopOf="@+id/profile_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_email"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/email"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintBottom_toTopOf="@+id/profile_phone_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_username" />
+
+            <Button
+                android:id="@+id/profile_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#752f37"
+                android:onClick="clickToChangePassword"
+                android:text="@string/change_password"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toTopOf="@+id/profile_data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_phone_number"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/profile_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#752f37"
+                android:text="@string/change_profile"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_password" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

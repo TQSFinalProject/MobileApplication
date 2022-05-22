@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".NewOrders">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efefef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foregroundGravity="bottom"
+                android:gravity="bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#000000"
+                    android:backgroundTint="#000000"
+                    android:gravity="center|center_horizontal|top|center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/new_orders_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/new_orders"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goNewOrders"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_add_box_24"
+                        app:tint="#752f37"
+                        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/my_orders_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/my_orders"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goMyOrders"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_notes_24"
+                        app:tint="#752f37"
+                        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/profile_settings_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/profile_settings"
+                        android:foregroundTint="#752f37"
+                        android:minHeight="48dp"
+                        android:onClick="goProfileSettings"
+                        android:scrollbarSize="4dp"
+                        app:srcCompat="@drawable/ic_baseline_person_24"
+                        app:tint="#752f37"
+                        tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    android:backgroundTint="#000000"
+                    android:gravity="center|center_horizontal|top"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/new_orders_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goNewOrders"
+                        android:text="@string/new_orders"
+                        android:textColor="#752F37"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/my_orders_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goMyOrders"
+                        android:text="@string/my_orders"
+                        android:textColor="#752f37"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/profile_settings_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="goProfileSettings"
+                        android:text="@string/profile_settings"
+                        android:textColor="#752f37"
+                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/order_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:background="#e4e4e4"
+                android:backgroundTint="#e4e4e4"
+                android:ems="10"
+                android:hint="@string/order_number"
+                android:minHeight="48dp"
+                android:onClick="checkDetails"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#555"
+                android:textColorHint="#555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

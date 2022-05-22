@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="New Orders"
+        android:icon="@drawable/ic_baseline_add_box_24"
+        android:enabled="true"
+        android:id="@+id/new_orders"/>
+    <item android:title="My Orders"
+        android:icon="@drawable/ic_baseline_notes_24"
+        android:enabled="true"
+        android:id="@+id/my_orders"/>
+    <item android:title="Profile Settings"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:enabled="true"
+        android:id="@+id/profile_settings"/>
+</menu>

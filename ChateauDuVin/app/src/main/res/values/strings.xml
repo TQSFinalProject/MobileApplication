@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ChateauDuVin</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_register">REGISTER</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password_confirm">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="new_orders">New Orders</string>
+    <string name="my_orders">My Orders</string>
+    <string name="change_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="name_client">Name</string>
+    <string name="phone_number_client">Phone Number</string>
+    <string name="order_number">Order</string>
+    <string name="location_client">Location</string>
+    <string name="details">Details</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+</resources>
