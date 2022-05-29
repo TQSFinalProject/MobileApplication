@@ -2,16 +2,37 @@ package com.example.chateauduvin
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Debug
+import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class OrderDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_details)
+
+        var origin : String = intent.getStringExtra("From").toString()
+        val buttonDecline = findViewById<Button>(R.id.order_decline)
+        val buttonAccept = findViewById<Button>(R.id.order_accept)
+        var show : Boolean = true
+
+        Log.d("hey", origin)
+
+        if (origin == "new_oders") {
+            Log.d("hey", "entrei")
+            show = false
+        }
+
+        if (show) {
+            buttonDecline.visibility = View.INVISIBLE
+            buttonAccept.visibility = View.INVISIBLE
+        }
     }
+
 
     fun clickToCall(view: View) {
         val editText : TextView = findViewById(R.id.phone_client)
