@@ -27,6 +27,7 @@ class NewOrders : AppCompatActivity() {
 
     fun checkDetails(view: View) {
         val intent = Intent(this, OrderDetails::class.java)
+        intent.putExtra("From", "new_orders")
         startActivity(intent)
     }
 }

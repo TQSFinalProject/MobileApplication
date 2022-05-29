@@ -29,6 +29,7 @@ class MyOrders : AppCompatActivity() {
 
         //TODO: desativar os butões de aceitar e recusar neste caso
         val intent = Intent(this, OrderDetails::class.java)
+        intent.putExtra("From", "my_orders")
         startActivity(intent)
     }
 }

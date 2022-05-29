@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChateauDuVin</string>
+    <string name="app_name">QuickDrink</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="action_sign_in">Sign In</string>
