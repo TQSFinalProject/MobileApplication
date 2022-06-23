@@ -1,19 +1,19 @@
 package com.example.chateauduvin.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.chateauduvin.R
-import com.example.chateauduvin.data.Login
+import com.example.chateauduvin.data.Rider
 import com.google.gson.Gson
 import okhttp3.*
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
+
 
 class Profile : AppCompatActivity() {
 
@@ -26,12 +26,11 @@ class Profile : AppCompatActivity() {
         val last_name: TextView = findViewById(R.id.profile_last_name)
         val first_name: TextView = findViewById(R.id.profile_first_name)
         val username: TextView = findViewById(R.id.profile_username)
-        val email: TextView = findViewById(R.id.profile_email)
         val phone_number: TextView = findViewById(R.id.profile_phone_number)
         val token_label : String = intent.getStringExtra("Token").toString()
         val username_label : String = intent.getStringExtra("Username").toString()
 
-        val url_riders = "$url/api/riders"
+        val url_riders = "$url/myprofile"
 
        val client = OkHttpClient()
 
@@ -49,19 +48,17 @@ class Profile : AppCompatActivity() {
                 override fun onResponse(call: Call, response: Response) {
                     Log.d("SuccessProfile", response.toString())
                     // Log.d("SuccessProfile", response.body?.string() ?: "")
-
                     val jsonObject = JSONObject(response.body?.string() ?: "")
 
-                    Log.d("Success", jsonObject.getString("content"))
-                    
-                    // val value = jsonObject.getString("content")
-                    /*token_label.setText(value)*/
+                    last_name.setText( jsonObject.getString("lastName"))
+                    first_name.setText( jsonObject.getString("firstName"))
+                    phone_number.setText( jsonObject.getString("phone"))
+                    username.setText( username_label)
+
                 }
                 // you code to handle response
 
             });
-
-            // Log.d("Token", token)
 
         }
 
