@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#efefef"
-    tools:context=".Profile">
+    tools:context=".ui.Profile">
 
     <ScrollView
         android:id="@+id/scrollView4"
@@ -277,6 +277,7 @@
                 android:onClick="clickToChangePassword"
                 android:text="@string/change_password"
                 android:textColor="#fff"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toTopOf="@+id/profile_data"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -294,6 +295,7 @@
                 android:backgroundTint="#752f37"
                 android:text="@string/change_profile"
                 android:textColor="#fff"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

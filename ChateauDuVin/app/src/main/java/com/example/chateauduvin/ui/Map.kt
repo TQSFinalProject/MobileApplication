@@ -1,10 +1,11 @@
-package com.example.chateauduvin
+package com.example.chateauduvin.ui
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.chateauduvin.R
 
 class Map : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
