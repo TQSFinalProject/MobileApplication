@@ -1,7 +1,8 @@
-package com.example.chateauduvin
+package com.example.chateauduvin.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.chateauduvin.R
 
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

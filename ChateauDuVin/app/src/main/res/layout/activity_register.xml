@@ -8,7 +8,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#efefef"
 android:padding="30dp"
-tools:context=".Register">
+tools:context=".ui.Register">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
