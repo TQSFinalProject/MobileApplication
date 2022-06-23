@@ -27,6 +27,7 @@ class Profile : AppCompatActivity() {
         val first_name: TextView = findViewById(R.id.profile_first_name)
         val username: TextView = findViewById(R.id.profile_username)
         val phone_number: TextView = findViewById(R.id.profile_phone_number)
+
         val token_label : String = intent.getStringExtra("Token").toString()
         val username_label : String = intent.getStringExtra("Username").toString()
 
@@ -70,16 +71,28 @@ class Profile : AppCompatActivity() {
     }
 
     fun goNewOrders(view : View) {
+        val token_label : String = intent.getStringExtra("Token").toString()
+        val username_label : String = intent.getStringExtra("Username").toString()
         val intent = Intent(this, NewOrders::class.java)
+        intent.putExtra("Token", token_label)
+        intent.putExtra("Username", username_label)
         startActivity(intent)
     }
 
     fun goMyOrders(view : View) {
+        val token_label : String = intent.getStringExtra("Token").toString()
+        val username_label : String = intent.getStringExtra("Username").toString()
         val intent = Intent(this, MyOrders::class.java)
+        intent.putExtra("Token", token_label)
+        intent.putExtra("Username", username_label)
         startActivity(intent)
     }
     fun goProfileSettings(view : View) {
+        val token_label : String = intent.getStringExtra("Token").toString()
+        val username_label : String = intent.getStringExtra("Username").toString()
         val intent = Intent(this, Profile::class.java)
+        intent.putExtra("Token", token_label)
+        intent.putExtra("Username", username_label)
         startActivity(intent)
     }
 }

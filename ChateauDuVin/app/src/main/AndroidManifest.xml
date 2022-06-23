@@ -11,8 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.ChateauDuVin">
+        android:theme="@style/Theme.ChateauDuVin"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.MyOrdersDetails"
+            android:exported="false" />
         <activity
             android:name=".ui.MyOrders"
             android:exported="false" />
