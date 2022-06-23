@@ -12,30 +12,19 @@ import com.example.chateauduvin.R
 import com.google.gson.Gson
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import org.json.JSONObject
 import java.io.IOException
 
-class OrderDetails : AppCompatActivity() {
+
+class MyOrdersDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_order_details)
+        setContentView(R.layout.activity_my_orders_details)
 
-        var origin : String = intent.getStringExtra("From").toString()
-        val buttonDecline = findViewById<Button>(R.id.order_complete)
-        val buttonAccept = findViewById<Button>(R.id.order_accept)
-        var show : Boolean = true
-
-        Log.d("hey", origin)
-
-        if (origin == "new_oders") {
-            Log.d("hey", "entrei")
-            show = false
-        }
-
-        if (show) {
-            buttonDecline.visibility = View.INVISIBLE
-            buttonAccept.visibility = View.INVISIBLE
-        }
+        val buttonComplete = findViewById<Button>(R.id.order_complete)
     }
+
+
 
 
     fun clickToCall(view: View) {
@@ -56,13 +45,7 @@ class OrderDetails : AppCompatActivity() {
         startActivity(mapIntent)
     }
 
-    fun clickToBack(view : View) {
-        val intent = Intent(this, NewOrders::class.java)
-        startActivity(intent)
-    }
-
-
-    fun clickToAccept(view: View) {
+    fun clickToComplete(view: View) {
         val id : String = intent.getStringExtra("Id").toString()
         val token_label : String = intent.getStringExtra("Token").toString()
 
@@ -71,7 +54,7 @@ class OrderDetails : AppCompatActivity() {
         val body = RequestBody.create(mediaType, json)
 
         val client = OkHttpClient()
-        val url : String =  "http://deti-tqs-14.ua.pt:8080/api/rider/order/accept/" + id
+        val url : String =  "http://deti-tqs-14.ua.pt:8080/api/rider/order/complete/" + id
         val request = Request.Builder()
             .url(url)
             .put(body)
@@ -94,4 +77,36 @@ class OrderDetails : AppCompatActivity() {
         });
     }
 
+    fun clickToDelivering(view: View) {
+        val id : String = intent.getStringExtra("Id").toString()
+        val token_label : String = intent.getStringExtra("Token").toString()
+
+        val json : String = Gson().toJson("")
+        val mediaType = "application/json".toMediaTypeOrNull()
+        val body = RequestBody.create(mediaType, json)
+
+        val client = OkHttpClient()
+        val url : String =  "http://deti-tqs-14.ua.pt:8080/api/rider/order/delivering/" + id
+        val request = Request.Builder()
+            .url(url)
+            .put(body)
+            .header("Authorization", "Bearer " + token_label)
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace();
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                Log.d("Success", response.toString())
+                // Log.d("Success", response.body?.string() ?: "")
+
+
+            }
+            // you code to handle response
+
+        });
+    }
 }
+
