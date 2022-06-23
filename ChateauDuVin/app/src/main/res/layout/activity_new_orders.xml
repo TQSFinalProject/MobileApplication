@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#efefef"
-    tools:context=".NewOrders">
+    tools:context=".ui.NewOrders">
 
     <ScrollView
         android:id="@+id/scrollView4"
@@ -144,28 +144,14 @@
                 </TableRow>
             </TableLayout>
 
-            <TextView
-                android:id="@+id/order_number"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:background="#e4e4e4"
-                android:backgroundTint="#e4e4e4"
+            <EditText
+                android:id="@+id/temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/order_number"
-                android:minHeight="48dp"
-                android:onClick="checkDetails"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textColor="#555"
-                android:textColorHint="#555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-                tools:ignore="TextContrastCheck" />
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="17dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
